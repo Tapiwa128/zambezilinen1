@@ -1,0 +1,25 @@
+section#blog-main-section {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+section#latest-blog,
+section#brand-collection,
+section#instagram {
+    margin: 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section#latest-blog h3,
+section#brand-collection h3,
+section#instagram h3 {
+    font-size: 55px;
+    font-weight: 200;
+}
+
+section#instagram {
+    margin-bottom: 100px;
+}
