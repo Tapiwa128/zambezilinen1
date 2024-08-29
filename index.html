@@ -1275,10 +1275,24 @@
 
       addToCartFP.forEach((item) => {
         item.addEventListener("click", function () {
-          const imageHolder = item.parentElement.parentElement.parentElement.firstElementChild.firstElementChild;
+          const image =
+            item.parentElement.parentElement.parentElement.firstElementChild
+              .firstElementChild;
 
-          const data = { image: imageHolder.getAttribute("src") };
+          const productDetails =
+            item.parentElement.parentElement.nextElementSibling;
+
+          const pname = productDetails.firstElementChild;
+          const price = pname.nextElementSibling;
+
+          const data = {
+            image: image.getAttribute("src"),
+            pname: pname.textContent,
+            price: price.textContent,
+          };
+
           const queryString = new URLSearchParams(data).toString();
+
           const singlePostUrl = `single-post.html?${queryString}`;
           window.location.href = singlePostUrl;
         });
