@@ -1268,9 +1268,35 @@
     </div>
   </div>
 
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const addToCartFP = document.querySelectorAll(
+        ".product-item .cart-concern .cart-button button[type=button]"
+      );
+      
+      console.log(addToCartFP)
+
+      addToCartFP.forEach((item) => {
+        item.addEventListener("click", function () {
+          const imageHolder = item.parentElement.parentElement.parentElement.firstElementChild.firstElementChild;
+
+          const data = { image: imageHolder.getAttribute("src") };
+          const queryString = new URLSearchParams(data).toString();
+          const singlePostUrl = `single-post.html?${queryString}`;
+          window.location.href = singlePostUrl;
+        });
+      });
+
+    });
+
+  </script>
+
+
   <script src="js/jquery-1.11.0.min.js"></script>
   <script src="js/plugins.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/items_functioon.js"></script>
 </body>
 
 </html>

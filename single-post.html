@@ -13,13 +13,13 @@
   <meta name="description" content="">
 
 
-<!--Whats App Start -->
+  <!--Whats App Start -->
 
-<script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
-<div class="elfsight-app-bd30ee46-d86b-4ca2-8124-99e1293f4d66" data-elfsight-app-lazy></div>
+  <script src="https://static.elfsight.com/platform/platform.js" data-use-service-core defer></script>
+  <div class="elfsight-app-bd30ee46-d86b-4ca2-8124-99e1293f4d66" data-elfsight-app-lazy></div>
 
-<!--Whats App End -->
-  
+  <!--Whats App End -->
+
   <link rel="stylesheet" type="text/css" href="css/normalize.css">
   <link rel="stylesheet" type="text/css" href="icomoon/icomoon.css">
   <link rel="stylesheet" type="text/css" media="all"
@@ -235,82 +235,6 @@
     </div>
   </div>
 
-  <section class="post-comment bg-light-grey" style="padding: 0;margin: 0;">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="comments-wrap">
-            <h3>Comments</h3>
-            <div class="comment-list">
-              <article class="d-flex">
-                <div class="author-post">
-                  <div class="comment-meta">
-                    <h4 class="meta-name">Rachel Ross</h4>
-                    <span class="meta-date">Aug 20,2022</span>
-                    <small class="comments-reply">
-                      <a href="#">
-                        <i class="icon icon-reply"></i>Reply </a>
-                    </small>
-                  </div>
-                  <p>
-                    I was blown away by the quality and attention to detail.Its truly made a difference in my life!!
-                  </p>
-                </div>
-              </article>
-              <div class="child-comments">
-                <article class="d-flex">
-                  <div class="author-post">
-                    <div class="comment-meta">
-                      <h4 class="meta-name">Jane Park</h4>
-                      <span class="meta-date">Sep 3,2022</span>
-                      <small class="comments-reply">
-                        <a href="#">
-                          <i class="icon icon-reply"></i>Reply </a>
-                      </small>
-                    </div>
-                    <p>I have never experienced anything like it.The difference is truly remarkable</p>
-                  </div>
-                </article>
-              </div>
-              <article class="d-flex">
-                <div class="author-post">
-                  <div class="comment-meta">
-                    <h4 class="meta-name">Rachel Ross</h4>
-                    <span class="meta-date">Aug 20,2022</span>
-                    <small class="comments-reply">
-                      <a href="#">
-                        <i class="icon icon-reply"></i>Reply </a>
-                    </small>
-                  </div>
-                  <p>This definitely exceeded my expectations</p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="comment-respond">
-            <h3>Leave a Comment</h3>
-            <form method="post" class="form-group">
-              <input class="u-full-width" type="text" name="author" id="author" class="form-control"
-                placeholder="Your full name">
-              <input class="u-full-width" type="email" name="email" id="email" class="form-control"
-                placeholder="E-mail Address">
-              <textarea class="u-full-width" id="comment" class="form-control" name="comment"
-                placeholder="Write your comment here" rows="20"></textarea>
-              <label class="example-send-yourself-copy">
-                <input type="checkbox">
-                <span class="label-body">Save my name, email, and website in this browser for the next time I
-                  comment.</span>
-              </label>
-              <button type="submit" name="submit" class="btn btn-dark btn-medium">Submit</button>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section id="shipping-information">
     <hr>
     <div class="container">
@@ -409,7 +333,8 @@
           <div class="col-lg-3 col-md-6 col-sm-6">
             <div class="footer-menu">
               <h5 class="widget-title">Contact Us</h5>
-              <p>Do you have any questions or suggestions?<a href="mailto:info@zambezilinen.com" class="email">info@zambezilinen.com</a>
+              <p>Do you have any questions or suggestions?<a href="mailto:info@zambezilinen.com"
+                  class="email">info@zambezilinen.com</a>
               </p>
               <p>Do you need assistance? Give us a call. <br>
                 <strong>+263 77 627 0986</strong>
@@ -472,6 +397,21 @@
       </div>
     </div>
   </div>
+
+  <script>
+    const url = new URL(window.location.href)
+
+    const params = new URLSearchParams(url.search)
+    const imagePath = params.get('image')
+
+    const mainImage = document.querySelector(`body > div.main-content.d-flex.flex-wrap.padding-large > div > div > div > div > img`)
+
+    mainImage.setAttribute('src', imagePath || 'images/1.jpg')
+  
+
+  </script>
+
+
 
   <script src="js/jquery-1.11.0.min.js"></script>
   <script src="js/plugins.js"></script>
