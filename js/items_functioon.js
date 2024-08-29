@@ -12,11 +12,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
   addToCart.forEach((item) => {
     item.addEventListener("click", function () {
-      const imageHolder =
+      const image =
         item.parentElement.parentElement.parentElement.firstElementChild
           .firstElementChild;
 
-      const data = { image: imageHolder.getAttribute("src") };
+      const pname = item
+      const price = item
+
+      const data = {
+        image: image.getAttribute("src"),
+        pname:'',
+        price:'',
+      };
+
       const queryString = new URLSearchParams(data).toString();
       const singlePostUrl = `single-post.html?${queryString}`;
       window.location.href = singlePostUrl;
