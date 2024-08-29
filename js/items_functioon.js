@@ -16,25 +16,27 @@ document.addEventListener("DOMContentLoaded", function () {
         item.parentElement.parentElement.parentElement.firstElementChild
           .firstElementChild;
 
-      const pname = item
-      const price = item
+      const productDetails =
+        item.parentElement.parentElement.nextElementSibling;
+
+      const pname = productDetails.firstElementChild;
+      const price = pname.nextElementSibling;
 
       const data = {
         image: image.getAttribute("src"),
-        pname:'',
-        price:'',
+        pname: pname.textContent,
+        price: price.textContent,
       };
 
       const queryString = new URLSearchParams(data).toString();
+
       const singlePostUrl = `single-post.html?${queryString}`;
       window.location.href = singlePostUrl;
     });
   });
 
   quickView.forEach((item) => {
-    item.addEventListener("click", function () {
-      console.log(item);
-    });
+    item.addEventListener("click", function () {});
   });
 
   likeItem.forEach((item) => {

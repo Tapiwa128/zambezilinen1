@@ -405,15 +405,22 @@
 
     const params = new URLSearchParams(url.search)
     const imagePath = params.get('image')
+    const pname = params.get('pname')
+    const price = params.get('price')
 
     const mainImage = document.querySelector(`body > div.main-content.d-flex.flex-wrap.padding-large > div > div > div > div > img`)
 
     mainImage.setAttribute('src', imagePath || 'images/1.jpg')
 
+    firstH2 = mainImage.nextElementSibling
+    secondH2 = firstH2.nextElementSibling
+
+    secondH2.textContent = price
+
+    document.querySelector("body > div.main-content.d-flex.flex-wrap.padding-large > div > div > div:nth-child(1) > h1").textContent = pname
+
 
   </script>
-
-
 
   <script src="js/jquery-1.11.0.min.js"></script>
   <script src="js/plugins.js"></script>
